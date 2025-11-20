@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../LanguageContext';
+import InkNetworkBackground from './InkNetworkBackground';
 
 const Hero: React.FC = () => {
   const { content } = useLanguage();
@@ -21,6 +22,19 @@ const Hero: React.FC = () => {
 
   return (
     <section id="hero" className="relative min-h-[90vh] flex flex-col justify-center items-center overflow-hidden p-8 bg-porcelain">
+
+      {/* Background Effect confined to Hero */}
+      <InkNetworkBackground />
+
+      {/* SVG Filters for Ink Effect (kept for potential future use or background texture, can be removed if unused) */}
+      <svg className="absolute w-0 h-0 pointer-events-none" aria-hidden="true">
+        <defs>
+          <filter id="ink-flow-texture">
+            <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+          </filter>
+        </defs>
+      </svg>
 
       {/* Main Content */}
       <div className="z-10 text-center max-w-5xl relative mt-12">
