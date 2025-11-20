@@ -26,56 +26,6 @@ const Hero: React.FC = () => {
       {/* Background Effect confined to Hero */}
       <InkNetworkBackground />
 
-      {/* SVG Filters for Ink Effect */}
-      <svg className="absolute w-0 h-0 pointer-events-none" aria-hidden="true">
-        <defs>
-          <filter id="ink-flow-texture">
-            <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise" />
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
-          </filter>
-        </defs>
-      </svg>
-
-      {/* Left Ink/Neural Decoration */}
-      <div className="hidden xl:block absolute left-0 top-1/2 -translate-y-1/2 w-64 h-[600px] opacity-25 pointer-events-none z-0">
-          <svg width="100%" height="100%" viewBox="0 0 300 600" className="overflow-visible">
-            <g filter="url(#ink-flow-texture)" stroke="#1a1a1a" strokeWidth="1.5" fill="none" strokeLinecap="round">
-                <path d="M-40,300 C60,300 80,200 150,180" />
-                <path d="M150,180 C200,160 250,200 280,250" />
-                <path d="M150,180 C180,100 120,50 160,20" />
-                <path d="M-40,350 C70,360 110,450 180,480" />
-                <path d="M180,480 C240,500 260,550 290,580" />
-                <path d="M150,180 C160,250 140,350 180,480" strokeDasharray="5,5" opacity="0.6"/>
-            </g>
-            <g filter="url(#ink-flow-texture)" fill="#1a1a1a">
-                <circle cx="150" cy="180" r="4" />
-                <circle cx="280" cy="250" r="3" />
-                <circle cx="160" cy="20" r="3" />
-                <circle cx="180" cy="480" r="5" />
-                <circle cx="290" cy="580" r="3" />
-            </g>
-          </svg>
-      </div>
-
-      {/* Right Ink/Neural Decoration */}
-      <div className="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2 w-64 h-[600px] opacity-25 pointer-events-none z-0">
-          <svg width="100%" height="100%" viewBox="0 0 300 600" className="overflow-visible">
-            <g filter="url(#ink-flow-texture)" stroke="#1a1a1a" strokeWidth="1.5" fill="none" strokeLinecap="round">
-                <path d="M340,300 C240,300 210,400 150,420" />
-                <path d="M150,420 C100,440 50,400 20,350" />
-                <path d="M150,420 C120,500 180,550 140,580" />
-                <path d="M340,250 C260,240 220,150 150,120" />
-                <path d="M150,420 C140,300 160,200 150,120" strokeDasharray="5,5" opacity="0.6"/>
-            </g>
-            <g filter="url(#ink-flow-texture)" fill="#1a1a1a">
-                <circle cx="150" cy="420" r="4" />
-                <circle cx="20" cy="350" r="3" />
-                <circle cx="140" cy="580" r="3" />
-                <circle cx="150" cy="120" r="5" />
-            </g>
-          </svg>
-      </div>
-
       {/* Main Content */}
       <div className="z-10 text-center max-w-5xl relative mt-12">
         

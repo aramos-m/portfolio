@@ -183,7 +183,7 @@ export const CONTENT: { en: Content; es: Content } = {
         role: "Analista de IA Conversacional",
         desc1: "Uniendo",
         desc2: "Lenguaje Natural",
-        desc3: "y",
+        desc3: "e",
         desc4: "Inteligencia Artificial",
         desc5: "Especializada en PNL, Automatización de Procesos y Estudios Chinos.",
         projects: "Proyectos",
