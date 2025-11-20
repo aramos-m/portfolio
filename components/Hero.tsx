@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../LanguageContext';
-import InkNetworkBackground from './InkNetworkBackground';
 
 const Hero: React.FC = () => {
   const { content } = useLanguage();
@@ -22,9 +21,6 @@ const Hero: React.FC = () => {
 
   return (
     <section id="hero" className="relative min-h-[90vh] flex flex-col justify-center items-center overflow-hidden p-8 bg-porcelain">
-      
-      {/* Background Effect confined to Hero */}
-      <InkNetworkBackground />
 
       {/* Main Content */}
       <div className="z-10 text-center max-w-5xl relative mt-12">
